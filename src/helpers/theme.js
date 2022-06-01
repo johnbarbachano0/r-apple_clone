@@ -21,7 +21,7 @@ const getDesignTokens = (mode) => ({
     text: {
       ...(mode === "light"
         ? {
-            primary: grey[900],
+            primary: "#1d1d1F",
             secondary: grey[800],
           }
         : {
@@ -31,12 +31,30 @@ const getDesignTokens = (mode) => ({
     },
   },
   typography: {
+    "& a": {
+      color: "red",
+    },
     button: {
       textTransform: "none",
     },
     merri: {
       fontFamily: "Merriweather",
     },
+    fontFamily: [
+      "SF Pro",
+      "Inter",
+      "-apple-system",
+      "BlinkMacSystemFont",
+      '"Segoe UI"',
+      "Roboto",
+      '"Helvetica Neue"',
+      "Arial",
+      "sans-serif",
+      '"Apple Color Emoji"',
+      '"Segoe UI Emoji"',
+      '"Segoe UI Symbol"',
+    ].join(","),
+    color: "#1d1d1F",
   },
   components: {
     MuiCardContent: {
@@ -48,6 +66,7 @@ const getDesignTokens = (mode) => ({
       },
     },
   },
+  // shadows: ["none"],
 });
 
 export default function Theme(props) {
