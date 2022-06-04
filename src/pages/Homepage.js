@@ -1,26 +1,25 @@
-import React, { useEffect } from "react";
+import React from "react";
+import Appbar from "../components/appbar/Appbar";
+import Footer from "../components/footer.js/Footer";
+import Product1 from "../components/products/Product1";
+import Product2 from "../components/products/Product2";
+import Support from "../components/support/Support";
+import Tiles from "../components/tiles/Tiles";
+import Trailer from "../components/trailer/Trailer";
 import { Paper } from "@mui/material";
-// import { setMaintenance } from "../features/Maintenance";
-// import { useDispatch } from "react-redux";
-// import { useGetMaintenanceQuery } from "../services/MaintenanceService";
 
 const Homepage = () => {
-  // const dispatch = useDispatch();
-  // const hasVisit = localStorage.getItem("hasVisit");
-  // const expDate = localStorage.getItem("expDate");
-
-  // const { data, isLoading } = useGetMaintenanceQuery({ query: "" });
-
-  // useEffect(() => {
-  //   data && !isLoading && dispatch(setMaintenance(data));
-  // }, [data, dispatch, isLoading]);
-
-  // if (new Date(expDate) < new Date()) {
-  //   localStorage.removeItem("hasVisit");
-  //   localStorage.removeItem("expDate");
-  // }
-
-  return <Paper></Paper>;
+  return (
+    <Paper elevation={0}>
+      <Appbar />
+      <Support />
+      <Product1 />
+      <Product2 />
+      <Trailer />
+      <Tiles />
+      <Footer />
+    </Paper>
+  );
 };
 
 export default Homepage;
